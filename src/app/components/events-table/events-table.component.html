@@ -1,0 +1,37 @@
+<div class="widget-next-match ">
+    <table class="table custom-table ">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Starting date</th>
+                <th>Ending date</th>
+                <th>Time</th>
+                <th>Address</th>
+                <th>Price (DT)</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let event of events">
+                <td><strong>{{event._id}}</strong></td>
+                <td>{{event.title}}</td>
+                <td>{{event.description}}</td>
+                <td>{{event.starting}}</td>
+                <td>{{event.ending}}</td>
+                <td>{{event.time}}</td>
+                <td>{{event.address}}</td>
+                <td>{{event.price}}</td>
+                <td>
+                    <button class="btn btn-warning"(click)="goToEdit(event._id)">Edit</button>
+                    <button class="btn btn-success" (click)="goToDisplay(event._id)">Display</button>
+                    <button class="btn btn-danger"(click)="deleteEvent(event._id)">Delete</button>
+                </td>
+            </tr>
+            
+
+
+        </tbody>
+    </table>
+</div>

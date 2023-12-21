@@ -1,0 +1,38 @@
+<app-banner [b]="banner"></app-banner>
+<div class="courses">
+    <div class="section_background parallax-window" data-parallax="scroll"
+        data-image-src="assets/images/courses_background.jpg" data-speed="0.8"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section_title_container text-center">
+                    <h2 class="section_title">Popular Online Courses</h2>
+                    <div class="section_subtitle">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu.
+                            Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row courses_row">
+            <div class="col-lg-12 " style="margin-bottom: 5%;">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter Course name" [(ngModel)]="term"
+                            name="search" />
+                    </div>
+                </form>
+            </div>
+
+            <!-- Course -->
+
+            <div class="col-lg-4 course_col " *ngFor="let course of courses | customFilter:term">
+                <app-course [course]="course"></app-course>
+            </div>
+
+
+
+        </div>
+
+    </div>
+</div>

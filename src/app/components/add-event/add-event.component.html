@@ -1,0 +1,34 @@
+<app-banner [b]="banner"></app-banner>
+<div class="contact_info_container">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12" style="margin-top: 20px; margin-bottom: 20px;">
+                <form [formGroup]="eventForm" >
+                    <div class="form-group" >
+                        <input type="text" class="form-control" placeholder="Title" formControlName="title" [(ngModel)]="obj.title">
+                    </div>
+                    <div class="form-group">  
+                        <textarea class="counter_input counter_text_input" placeholder="Description"
+                        required="required"  formControlName="description" [(ngModel)]="obj.description"></textarea>
+                    </div>
+                    <div class="form-group" >
+                        <input type="date" class="form-control" placeholder="Starting date"  formControlName="starting" [(ngModel)]="obj.starting">
+                    </div>
+                    <div class="form-group" >
+                        <input type="date" class="form-control" placeholder="Ending date"  formControlName="ending" [(ngModel)]="obj.ending">
+                    </div>
+                    <div class="form-group" >
+                        <input type="time" class="form-control" placeholder="Time"  formControlName="time" [(ngModel)]="obj.time">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Address" formControlName="address" [(ngModel)]="obj.address">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" placeholder="Price (DT)" formControlName="price" [(ngModel)]="obj.price">
+                    </div>                   
+                    <button type="submit" class="btn btn-primary" (click)="addOrEditEvent()">{{banner}}</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

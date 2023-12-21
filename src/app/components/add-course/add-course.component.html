@@ -1,0 +1,48 @@
+<app-banner [b]="banner"></app-banner>
+<div class="contact_info_container">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12" style="margin-top: 20px; margin-bottom: 20px;">
+                <form [formGroup]="addCourseForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Name" formControlName="courseName" [(ngModel)]="obj.courseName">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" placeholder="Price (DT)" formControlName="price" [(ngModel)]="obj.price">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Duration" formControlName="duration" [(ngModel)]="obj.duration">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" placeholder="nbr of places" formControlName="places" [(ngModel)]="obj.places">
+                    </div>
+                    <div class="form-group dropdown">
+
+                        <select name="teacher" class="form-control"  (change)="selectTeacher($event)">
+                          <option value="">Select Teacher </option>
+                          <option [value]="teacher._id" *ngFor="let teacher of teachers" 
+                            >{{teacher.firstName}} {{teacher.lastName}}</option>
+            
+                        </select>
+            
+                      </div>
+                    <div class="form-group">
+                        <textarea class="counter_input counter_text_input" placeholder="Description"
+                            required="required" formControlName="description" [(ngModel)]="obj.description"></textarea>
+                    </div>
+                    <div class="form-group" style="visibility: hidden;">
+                        <input type="file" class="form-control" #filePicker (change)='onImageSelected($event)'>
+                    </div>
+                    <div class="text-center mb-3">
+                        <button class="btn btn-success" (click)="filePicker.click()"> Select Your Image</button> <br>
+                        <img [src]="imagePreview" class="mt-3 mb-3" width="200px">
+                    </div>
+
+                    <div class="text-center mb-3">
+                        <button type="submit" class="btn btn-primary" (click)="addOrEditCourse()" >{{banner}}</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

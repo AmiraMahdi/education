@@ -1,0 +1,32 @@
+<div class="widget-next-match ">
+    <table class="table custom-table ">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>Tel</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Courses</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr *ngFor="let user of users">
+          <td><strong >{{user._id}}</strong></td>
+          <td>{{user.firstName}}</td>
+          <td>{{user.lastName}}</td>
+          <td>{{user.tel}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.role}}</td>
+          <td>{{user.courses}}</td>
+          <td>
+            <button class="btn btn-danger" (click)="deleteUser(user._id)">Delete</button>
+          </td>
+        </tr>
+        
+        
+      </tbody>
+    </table>
+  </div>

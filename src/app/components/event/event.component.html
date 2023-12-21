@@ -1,0 +1,24 @@
+
+    <div class="event event_left">
+        <div class="event_image"><img src="assets/images/event_1.jpg" alt=""></div>
+        <div class="event_body d-flex flex-row align-items-start justify-content-start">
+            <div class="event_date">
+                <!-- <div class="d-flex flex-column align-items-center justify-content-center trans_200">
+                    <div class="event_day trans_200">21</div>
+                    <div class="event_month trans_200">Aug</div>
+                </div> -->
+            </div>
+            <div class="event_content">
+                <div class="event_title"><a href="#">{{y.title}}</a></div>
+                <div class="event_title"><a href="#" [ngStyle]="{'color': eventPrice(y.price)}">{{y.price}} DT</a></div>
+                <div class="event_info_container">
+                    <div class="event_info"><i class="fa fa-clock-o" aria-hidden="true"></i><span>{{y.starting}}
+                            - {{y.ending}}</span></div>
+                    <div class="event_info"><i class="fa fa-map-marker" aria-hidden="true"></i><span>{{y.address}},{{y.time}}</span></div>
+                    <div class="event_text">
+                        <p>{{y.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

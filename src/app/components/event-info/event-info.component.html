@@ -1,0 +1,26 @@
+<app-banner [b]="banner"></app-banner>
+<div class="events">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section_title_container text-center">
+                    <h2 class="section_title">{{foundEvent.title}}</h2>
+                    <div class="section_subtitle">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu.
+                            Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row events_row">
+
+            <!-- Event -->
+
+            <div class="col-lg-4 event_col">
+                <app-event [y]="foundEvent"></app-event>
+
+            </div>
+          
+        </div>
+    </div>
+</div>
